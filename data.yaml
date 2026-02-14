@@ -1,0 +1,16 @@
+path: data/dataset_yolo
+
+train: images/train
+val: images/val
+
+names:
+  0: car
+  1: bus
+  2: truck
+  3: person
+  4: bike
+  5: motor
+  6: rider
+  7: traffic light
+  8: traffic sign
+  9: train
