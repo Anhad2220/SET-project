@@ -2,21 +2,20 @@ import json
 import os
 import shutil
 from PIL import Image
+from config import BDD100K_PATH, YOLO_DATASET_PATH
 
 # ---------------- PATHS ----------------
-BASE_DIR = "data"
+IMAGE_SRC_TRAIN = os.path.join(BDD100K_PATH, "images", "train")
+IMAGE_SRC_VAL = os.path.join(BDD100K_PATH, "images", "val")
 
-IMAGE_SRC_TRAIN = f"{BASE_DIR}/bdd100k/images/train"
-IMAGE_SRC_VAL   = f"{BASE_DIR}/bdd100k/images/val"
+LABEL_SRC_TRAIN = os.path.join(BDD100K_PATH, "labels", "train.json")
+LABEL_SRC_VAL   = os.path.join(BDD100K_PATH, "labels", "val.json")
 
-LABEL_SRC_TRAIN = f"{BASE_DIR}/bdd100k/labels/train.json"
-LABEL_SRC_VAL   = f"{BASE_DIR}/bdd100k/labels/val.json"
+YOLO_IMG_TRAIN = os.path.join(YOLO_DATASET_PATH, "images", "train")
+YOLO_IMG_VAL   = os.path.join(YOLO_DATASET_PATH, "images", "val")
 
-YOLO_IMG_TRAIN = f"{BASE_DIR}/dataset_yolo/images/train"
-YOLO_IMG_VAL   = f"{BASE_DIR}/dataset_yolo/images/val"
-
-YOLO_LBL_TRAIN = f"{BASE_DIR}/dataset_yolo/labels/train"
-YOLO_LBL_VAL   = f"{BASE_DIR}/dataset_yolo/labels/val"
+YOLO_LBL_TRAIN = os.path.join(YOLO_DATASET_PATH, "labels", "train")
+YOLO_LBL_VAL   = os.path.join(YOLO_DATASET_PATH, "labels", "val")
 
 # ------------- CLASS MAP ----------------
 CLASS_MAP = {
