@@ -5,5 +5,6 @@ experiments/
 *.h5
 *.ckpt
 __pychache__/
-venv/ 
-__pychache__
+*.pyc
+venv/
+runs/ 
